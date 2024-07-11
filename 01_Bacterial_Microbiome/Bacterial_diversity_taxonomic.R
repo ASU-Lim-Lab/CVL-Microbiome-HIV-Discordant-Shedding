@@ -165,7 +165,7 @@ dis.bc <- vegdist(data.transposed, method = "bray")
 data.transposed[data.transposed > 0] <- 1
 dis.sor <- vegdist(data.transposed, method = "bray")
 
-##Mann-Whitney tests of Bray-Curtis dissimilarity within and between groups. Input: table with Bray-Curtis dissimilarity and metadata for sample pairs.##
+##Permutation tests of Bray-Curtis dissimilarity within and between groups. Input: table with Bray-Curtis dissimilarity and metadata for sample pairs.##
 library(coin)
 stats.data <- read.delim("BC_long_format_metadata.txt", header = TRUE, sep = "\t")
 stats.data$comparison_all <- as.factor(stats.data$comparison_all)
